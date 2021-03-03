@@ -1,1 +1,73 @@
 @import "_variables";
+
+.evenements{
+  width:100%; 
+  height:auto;
+  margin:40px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.evenements-title {
+  margin:0 35px;
+}
+
+.evenements-info {
+  display:flex;
+  flex-direction:column;
+  margin:25px 25px;
+  width: 50%;
+  height: auto;
+  text-align: justify;
+  .evenements-detail {
+    height: auto;
+    margin-top:25px;
+    padding:10px 10px;
+    span {
+      color:$color-secondary;
+    }
+    p {
+      margin-bottom:10px;
+      color:$color-text;
+    }
+    .name {
+      color:$color-text;
+    }
+    .name::before {
+      content:'';
+      display: inline-block;
+      width:50px;
+      height: 5px;
+      background:$color-secondary;
+      vertical-align: middle;
+      text-align: center;
+      margin-right:10px;
+    }
+  }
+}
+
+.evenements-img {
+  height:auto;
+  text-align: center;
+  img{
+    width: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media only screen and (max-width:1120px) {
+  .evenements-info {
+    width: 90%;
+    height: auto;
+    text-align: justify;
+  }
+  .evenements-img {
+    text-align: center;
+    width:100%;
+    img{
+      width: 500px;
+    }
+  }
+}
