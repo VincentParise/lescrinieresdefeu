@@ -933,10 +933,11 @@ img {
 
 .liste-temoignages .temoignage p {
   margin-bottom: 10px;
+  color: #000000;
 }
 
 .liste-temoignages .temoignage .name {
-  color: #67A300;
+  color: #000000;
 }
 
 .liste-temoignages .temoignage .name::before {
@@ -1115,6 +1116,114 @@ img {
   .liste-temoignages .temoignage {
     width: 280px;
     font-size: 0.9rem;
+  }
+}
+
+.infra-container {
+  width: 97%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #67A300;
+  margin: 20px 0px;
+  margin-left: 15px;
+  opacity: 1;
+}
+
+.infra-container .infra-title {
+  width: 45%;
+}
+
+.infra-container .infra-title h2 {
+  margin-left: 35px;
+  margin-top: 15px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.infra-container .infra-text {
+  width: 55%;
+  height: auto;
+}
+
+.infra-container .infra-text p {
+  padding: 20px 50px 20px 20px;
+  color: #000000;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 930px) {
+  .infra-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .infra-container .infra-title {
+    width: 100%;
+  }
+  .infra-container .infra-title h2 {
+    margin-left: 35px;
+    margin-top: 15px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+  .infra-container .infra-text {
+    width: 100%;
+    height: auto;
+  }
+  .infra-container .infra-text p {
+    padding: 20px 40px;
+    color: #000000;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .infra-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .infra-container .infra-title {
+    width: 100%;
+  }
+  .infra-container .infra-title h2 {
+    font-size: 2rem;
+  }
+  .infra-container .infra-text p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .infra-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .infra-container .infra-title {
+    width: 100%;
+  }
+  .infra-container .infra-title h2 {
+    font-size: 1.65rem;
+  }
+  .infra-container .infra-text p {
+    font-size: 0.9rem;
+    line-height: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
