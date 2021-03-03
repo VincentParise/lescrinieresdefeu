@@ -1,0 +1,294 @@
+@import "_variables";
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  padding:2rem;
+  overflow:hidden; /*comment gérer le dépassement du contenu d'un élément dans son bloc*/
+  display:flex; /*Gestion du positionnement*/
+  align-items: center; /* Positionnement verticale*/
+  justify-content: center; /*positionnement horizontal*/
+  opacity:1;
+}
+
+.contact-polygon {
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  z-index:-1;
+  transform:scale(2);
+  overflow: hidden;
+}
+
+.form {
+  width: 100%;
+  max-width: 1440px;
+  z-index:3; /*Définit l'ordre des boite visuel : sera au dessus des autres*/
+  overflow:hidden; /*comment gérer le dépassement du contenu d'un élément dans son bloc*/
+  display: grid; /* Gestion du positionnement par grille*/
+  grid-template-columns: 1fr 1fr;
+}
+
+// Contactez nous
+.contact-info {
+  padding:2.3rem 2.2rem; /*position*/
+  position: relative;
+  .text {
+    color:$color-text;
+    margin:1.5rem 0 2rem 0;
+    text-align:justify;
+  }
+}
+
+.information {
+  display:flex;
+  color:$color-text;
+  margin:0.7rem 0;
+  align-items: center;
+  font-size:0.95rem;  
+  p {
+    color:$color-text;
+    margin-left:25px;
+  }
+  .icon {
+    width: 28px;
+    margin-right:0.7rem;
+  }
+}
+
+// Gestion des cercles
+.circle {
+  border-radius:50%;
+  background: linear-gradient(135deg, transparent 20%, #aa0ac7);
+  position: absolute;
+}
+.circle.one{
+  width: 130px;
+  height:130px;
+  top: 130px;
+  right:-40px;
+}
+.circle.two{
+  width: 80px;
+  height:80px;
+  top: 10px;
+  right:40px;
+}
+
+// Gestion formulaire
+.contact-form {
+  background-color: $color-secondary;
+  box-shadow: inset -20px -25px 25px rgba(0, 0, 0, 0.25);
+  position:relative;
+}
+
+.contact-form:before { /* ::before élément juste après contact-form (petit rectange orienté 45deg*/
+  content:"";
+  position:absolute;
+  left: -13px;
+  top:50px;
+  width: 25px;
+  height:25px;
+  background-color:$color-secondary;
+  transform:rotate(45deg); /* Rotation de 45 degré*/
+}
+
+form {
+  padding:2.3rem 2rem; /*padding sur la hauteur et la gauche*/
+  z-index:1;
+  overflow:hidden;
+  position: relative;
+  
+}
+
+.input-container {
+  position:relative;
+  margin:1rem 0;
+}
+
+.input {
+  width:100%;
+  outline:none; /*bordure et contour*/
+  border:3px solid #fff;
+  background: none;
+  padding:0.6rem 1.2rem;
+  color:#fff;
+  font-weight:500;
+  font-size:0.95rem;
+  letter-spacing:1px; /*Espacement écriture*/
+  border-radius: 25px;
+  transition: 0.3s;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+textarea.input {
+  padding:0.8rem 1.2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  min-height: 150px;
+  border-radius:22px;
+  resize:none; /*On supprime la resize en bas à droite de l'aréa*/
+  overflow-y: auto;
+}
+
+.input-container label {
+  position:absolute;
+  top:50%;
+  left:15px;
+  transform:translateY(-50%);
+  padding:0 0.4rem;
+  color:#fff;
+  font-size:0.9rem;
+  font-weight:400;
+  pointer-events:none; /*enlève le curseur*/
+  z-index:3;
+  transition:0.5s;
+}
+
+.input-container.textarea label {
+  top:1rem;
+  transform:translateY(0);
+}
+
+.input-container span {
+  position:absolute;
+  top:0;
+  left:25px;
+  transform:translateY(-50%);
+  font-size:0.8rem;
+  padding:0 0.4rem;
+  color:transparent;
+  pointer-events: none;
+  z-index:2;
+  background-color:$color-secondary;
+ 
+}
+
+.input-container span::before, 
+.input-container span::after {
+  content:"";
+  position:absolute;
+  width: 10%;
+  opacity:0;   /*Non Visible*/
+  transition:0.3s;
+  height:5px;
+  background-color:$color-secondary;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.input-container span::before {
+  left:50%;
+}
+
+.input-container span::after {
+  right:50%;
+}
+
+.input-container.focus label {
+  top:0;
+  transform:translateY(-50%);
+  left:25px;
+  font-size:0.8rem;
+}
+
+.input-container.focus span::before, 
+.input-container.focus span::after {
+  width: 50%;
+  opacity:1; /*Visible*/
+}
+
+// Gestion bouton
+.btn {
+  padding:0.6rem 1.3rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color:$color-secondary;
+  border:2px solid #fff;
+  font-size:0.95rem;
+  color:#fff;
+  line-height:1;
+  border-radius:25px;
+  outline:none;
+  cursor:pointer;  /*type de pointeur*/
+}
+
+.btn:hover {
+  background-color:transparent;
+  color:$color-text;
+  margin:0;
+}
+
+.alert {
+  text-align:center;
+  padding:5px 0px;
+  color:#fff;
+}
+
+.alert-success{
+  background-color:rgba(102, 180, 119, 0.5);
+}
+
+.alert-danger {
+  background-color:rgba(206, 45, 45, 0.5);
+}
+
+@media (max-width:850px) {
+  .contact-container,
+  .contact-info {
+    padding-top: 10px;
+  }
+  .form {
+     grid-template-columns: 1fr;
+  }
+  .contact-info:before {
+    bottom:initial;
+    top:-75px;
+    right:65px;
+    transform:scale(0.95);
+  }
+  .contact-form:before { /* ::before élément juste après contact-form (petit rectange orienté 45deg*/
+    top:-12px;
+    left:initial;
+    right:70px;
+   }
+   .text {
+     margin:1rem 0 1.5rem 0;
+   }
+}
+
+@media (max-width:560px) {
+  .contact-info{
+    h2 {
+      font-size: 2rem;
+    }
+    .text{
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width:460px) {
+  .contact-container{
+    padding:10px;
+  }
+  .contact-info:before {
+   display:none;
+  }
+  .contact-info{
+    padding:10px 25px 25px 20px;
+    h2 {
+      font-size: 1.65rem;
+    }
+    .text{
+      font-size: 0.9rem;
+    }
+  }
+  .information {
+    p{
+      font-size: 1rem;
+    }
+  }
+  form{
+    padding:25px 25px;
+  }
+}
