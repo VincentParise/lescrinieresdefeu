@@ -1561,4 +1561,145 @@ textarea.input {
     padding: 25px 25px;
   }
 }
+
+.footer-container {
+  width: 100%;
+  height: 80px;
+  background: #67A300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 100px;
+  text-align: left;
+}
+
+.footer-container p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.footer-container p a {
+  padding: 0 10px;
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+}
+
+@media only screen and (max-width: 780px) {
+  .footer-container {
+    height: 60px;
+  }
+  .footer-container p {
+    font-size: 0.8rem;
+  }
+  .footer-container a {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .footer-container {
+    height: 60px;
+    padding: 0px 60px;
+  }
+  .footer-container p {
+    font-size: 0.7rem;
+  }
+  .footer-container a {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .footer-container {
+    height: 50px;
+    padding: 0px 50px;
+  }
+  .footer-container a {
+    line-height: 2px;
+    font-size: 0.5rem;
+  }
+}
+
+.mentions-container {
+  width: 100%;
+  min-width: 320px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mentions-polygon {
+  position: absolute;
+  top: 250px;
+  left: 270px;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.mentions-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+}
+
+.mentions-info p {
+  color: #000000;
+}
+
+.mentions-info h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.mentions-info p {
+  margin-left: 15px;
+}
+
+.mentions-info .text {
+  text-align: justify;
+}
+
+@media (max-width: 850px) {
+  .mentions-container,
+  .mentions-info {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .mentions-info h2 {
+    font-size: 2rem;
+  }
+  .mentions-polygon {
+    top: 300px;
+  }
+}
+
+@media (max-width: 460px) {
+  .mentions-container {
+    padding: 10px;
+  }
+  .mentions-info {
+    padding: 10px 25px 25px 20px;
+  }
+  .mentions-info h2 {
+    font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .mentions-polygon {
+    top: 360px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
