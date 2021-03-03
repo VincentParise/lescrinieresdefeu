@@ -1,0 +1,253 @@
+@import "_variables";
+
+.decouvrir-container {
+  width:100%;
+  height:506px;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  z-index:500;
+  overflow: hidden;
+  opacity:1;
+}
+
+.decouvrir-decouvrir {
+  display:flex;
+  justify-content: space-between;
+  height:400px;
+  color:$color-text;
+}
+
+.decouvrir-text{
+  display:flex;
+  flex-direction:column;
+  width:600px;
+  margin-left:60px;
+  padding-right:5px;
+  z-index:2;
+  p{
+    display:flex;
+    margin: 0 25px;
+    height:300px;
+    text-align: justify;
+    padding-top:15px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color:$color-text;
+  }
+}
+
+.decouvrir-images{
+  display: flex;
+  width:720px;
+  align-items: center;
+  transition:all 0.5s;
+  .decouvrir-img1 {
+    img {
+     margin : 0 auto;
+    }
+   }
+  .decouvrir-img2 {
+    padding: 0 40px;
+    img {
+      margin : 0 auto;
+    }
+  }
+}
+
+.decouvrir-equipe {
+  width:800px;
+  height: 120px;
+  font-family:'Noto Sans JP', sans-serif;
+  background:$color-primary;
+  color:$color-text;
+  z-index:4;
+  display:flex;
+  flex-direction: column;
+  padding:5px 25px;
+  font-size:1.68rem;
+  transition:all 0.5s;
+  transform:translate(100px,-40px);
+  h3{
+    font-size:1.1em;
+    font-weight:300;
+  }
+  p {
+    color:$color-text;
+    font-size:0.6em;
+    padding-top:5px;
+    padding-bottom: 5px;
+  }
+}
+
+.decouvrir-polygon {
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  z-index:-1;
+}
+
+@media screen and (max-width:1320px) {
+  .decouvrir-img1 img {
+    width:100%;
+  }
+
+  .decouvrir-img2 img {
+    width:100%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .decouvrir-img1 {
+    display:none;
+  }
+  .decouvrir-equipe {
+    transform:translate(80px,-30px);
+  }
+  .decouvrir-text{ 
+    width:700px;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .decouvrir-text{
+    display:flex;
+    width:100%;
+  }
+  .decouvrir-images{
+    position:absolute;
+    left :480px;
+    top:260px;
+    width:100%;
+  }
+ .decouvrir-equipe {
+    width:450px;
+    height:140px;
+    transform:translate(50px,-100px);
+  }
+}
+
+@media screen and (max-width:930px) {
+  .decouvrir-images{
+    display:none;
+  }
+}
+
+@media screen and (max-width:740px) {
+  .decouvrir-images{
+    display:none;
+  }
+ .decouvrir-equipe {
+    transform:translate(120px,-80px);
+  }
+}
+
+@media screen and (max-width:710px) {
+.decouvrir-text{
+  margin:0 30px;
+  padding-right:5px;
+  h2{
+    font-size:2.5rem;
+  }
+  p{
+    margin: 0 25px;
+    padding-top:15px;
+    font-size: 1.1rem;
+  }
+}
+.decouvrir-equipe {
+  transform:translate(40px,-80px);
+  width:450px;
+  h3{
+    font-size:1.6rem;
+  }
+  p {
+    font-size:1rem;
+  }
+}
+}
+
+@media screen and (max-width:600px) {
+  .decouvrir-text{
+    h2 {
+      font-size: 2.5rem;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 23px;
+    }
+  }
+  .decouvrir-equipe {
+    transform:translate(40px,-80px);
+    width:390px;
+    h3{
+      font-size:1.3rem;
+    }
+    p {
+      font-size:0.9rem;
+      letter-spacing: 0.5px;
+    }  
+  }
+}
+
+@media screen and (max-width:560px) {
+  .decouvrir-text{
+    h2{
+      font-size:2rem;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 23px;
+    }
+  }
+}
+
+@media screen and (max-width:460px) {
+  .decouvrir-text{
+    h2{
+      font-size:1.65rem;
+    }
+    p{
+      margin: 0 5px;
+      font-size: 1rem;
+      line-height: 23px;
+    }
+  }
+  .decouvrir-equipe {
+    transform:translate(35px,-40px);
+    width:300px;
+    h3{
+      font-size:1.1rem;
+    }
+    p {
+      font-size:0.8rem;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+    }  
+  }
+}
+
+@media screen and (max-width:395px) {
+  .decouvrir-text{
+    p{
+      margin: 0 5px;
+      font-size: 0.9rem;
+      line-height: 23px;
+    }
+  }
+}
+
+@media screen and (max-width:360px) {
+  .decouvrir-text{
+    p{
+      margin: 0 5px;
+      font-size: 0.9rem;
+      line-height: 23px;
+    }
+  }
+  .decouvrir-equipe {
+    transform:translate(15px,-30px);
+    width:280px;
+}
+}
