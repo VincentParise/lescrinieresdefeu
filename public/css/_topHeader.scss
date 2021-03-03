@@ -1,0 +1,188 @@
+@import "_variables";
+
+// ----------------------------------
+// ----------- TOP HEADER -----------
+// ----------------------------------
+
+.menu-box{
+  width: 100%;
+  height:458px;
+  display:flex;
+  position:relative;
+  
+  &-blue{
+    width:72px;
+    height: 380px;
+    background:$color-primary;
+    position:absolute;
+    top:0px;
+    right:0px;
+    display:flex;
+    z-index:-1;
+  }
+  &-bluelight{
+    width:300px;
+    height:165px;
+    background: $color-secondary;
+    box-shadow: inset 0px -44px 65px rgba(0, 0, 0, 0.25);
+    position:absolute;
+    right:0px;
+    top:320px;
+    display:flex;
+    z-index:5;
+  }
+}
+
+.menu-title {
+  width:95%;
+  height:400px;
+  background:linear-gradient(90deg, #187F00A3 0%, rgba(26, 26, 26, 0.62) 100%),
+            url('../img/header.jpg') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  font-family:'Roboto', sans-serif;
+  position:relative;
+  z-index:10;
+
+ .menu-title-top {
+   margin-left:86px;
+   margin-top:90px;
+   font-size:3.75rem;
+   color:$color-text;
+   user-select:none;
+   transition:all 0.3s;
+  } 
+  
+  .menu-title-middle {
+    margin-left:90px;
+    font-size:3.125rem;
+    color:$color-text;
+    margin-top:12px;
+    user-select:none;
+    transition:all 0.4s;
+  }
+}
+
+.menu-btn{
+  width: 70%;
+  margin-top:45px;
+  margin-left:90px;
+  a {
+    text-decoration: none;
+    font-family:'Noto Sans JP', sans-serif;
+    background:$color-secondary;
+    color:#FFFF;
+    border-radius:5px;
+    border:none;
+    border:1px solid transparent;
+    margin-left:35px;
+    padding: 10px 15px;
+    cursor:pointer;
+    letter-spacing: 0.1rem;
+    font-size:1rem;
+    transition:all 0.5s;
+  }
+  a:hover{
+    outline: none;
+    border:1px solid $color-text;
+    box-shadow: inset 0px -44px 65px rgba(0, 0, 0, 0.25);
+    transform:translate(-1px,-1px);
+  }
+}
+
+@media screen and (max-width:827px) {
+  .menu-box-bluelight {
+    top:280px;
+  }
+  .menu-title {
+    background:linear-gradient(90deg, #181D31 0%, rgba(26, 26, 26, 0.62) 100%),
+              url('../img/menu-header.jpg') right/cover no-repeat;
+  }
+}
+
+@media screen and (max-width:710px) {
+  .menu-box{
+    height: 428px;
+  }
+  .menu-title {
+  
+    .menu-title-top {
+      margin-left:74px;
+      margin-top:70px;
+      font-size:2.75rem;
+      white-space: nowrap;
+    } 
+    .menu-title-middle {
+      margin-left:76px;
+      font-size:2.125rem;
+      margin-top:12px;
+      white-space: nowrap;
+    }
+    .menu-btn {
+      width: 70%;
+      margin-top:45px;
+      margin-left:90px;
+    }
+  }
+  .menu-box-bluelight {
+    top:250px;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .menu-box{
+    height: 428px;
+  }
+  
+  .menu-title {
+    .menu-title-top {
+      margin: 25px auto;
+      font-size:2.1rem;
+      white-space: nowrap;
+    } 
+    .menu-title-middle {
+      margin: 25px auto;
+      font-size:1.8em;
+      
+      white-space: nowrap;
+    }
+    .menu-btn {
+      width: 100%;
+      margin-top: 25px;
+      margin-left:0px;
+      display: flex;
+      justify-content: center;
+      .btn {
+        margin:25px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:370px) {
+ 
+  .menu-box{
+    height: 428px;
+  }
+ 
+  .menu-title {
+    .menu-title-top {
+      font-size:2.1rem;
+      white-space: nowrap;
+    } 
+    .menu-title-middle {
+      font-size:1.8em;
+      
+      white-space: nowrap;
+    }
+  }
+  .menu-btn{
+    .btn {
+      margin:0;
+      font-size:0.8rem;
+    }
+  }
+  
+
+}
